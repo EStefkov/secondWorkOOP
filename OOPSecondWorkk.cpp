@@ -47,10 +47,21 @@ void main()
 
 		} break;
 		case'2':for (int i = 0; i < plants; i++) product[i]->display(); break;
-		case'3':for (int i = 0; i < plants; i++);
-			
+		case'3':for (int i = 0; i < plants; i++) {
+			CTree* overM = dynamic_cast<CTree*>(product[i]);
+				if (overM != nullptr && overM->height >= 2) {
+					product[i]->display();
+
+				}
+		}
 			; break;
-		case'4':break;
+		case'4':for (int i = 0; i < plants; i++) {
+			CFlower* color = dynamic_cast<CFlower*>(product[i]);
+				if (color != nullptr) {
+					cout << "Flowers are \n";
+					product[i]->display();
+				}
+		}; break;
 		default: cout << "\nERROR YOUR INPUT IS INCORRECT\n";
 		}
 
