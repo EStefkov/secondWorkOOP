@@ -6,12 +6,12 @@ class CTree :
      public CGarden
 {
 protected:
-    float height;
-    string type = {"coniferous","deciduous"};
+    
+    string type;
 public:
+    float height;
     CTree(void);
     CTree(float height, string type);
-    ~CTree();
     void getData();
     void display();
 

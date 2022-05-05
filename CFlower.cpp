@@ -1,4 +1,6 @@
 #include "CFlower.h"
+#include <iostream>
+using namespace std;
 CFlower::CFlower(void) {
 	color = "Your input is incorrect";
 
@@ -8,9 +10,10 @@ CFlower::CFlower(string color) {
 }
 void CFlower::getData() {
 	CGarden::getData();
-	cout << "Please eneter the color of flower"; getline(cin, color);
+	cin.ignore();
+	cout << "\nPlease eneter the color of flower"; getline(cin, color);
 }
 void CFlower::display() {
 	CGarden::display();
-	cout << "Color of the flower is: " << color;
+	cout << "\nColor of the flower is: " << color;
 }

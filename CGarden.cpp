@@ -1,6 +1,4 @@
-#include "CGarden.h"
-#include "CTree.h"
-#include "CFlower.h"
+#include"CGarden.h"
 #include <string>
 #include <iostream>
 #include <stdlib.h>
@@ -18,10 +16,9 @@ CGarden::CGarden(string name, float price, int number) {
 	this->number = number;
 
 }
-CGarden::~CGarden() {}
    void CGarden::getData() {
 	 cin.ignore();
-	 cout << "Please enter Tree or Flower: "; getline(cin,name);
+	 cout << "Please enter name of the plant: "; getline(cin,name);
 	 cout << "Enter price for: "; cin >> price;
 	 cout << "Enter number of plants: "; cin >> number;
 
@@ -29,6 +26,6 @@ CGarden::~CGarden() {}
    void CGarden::display() {
 	   cout << "You select: " << name <<
 		   "\nPrice for the "<<name<< " is :" << price <<
-		   "Number of plants: " << number;
+		   "\nNumber of plants: " << number;
    
    }

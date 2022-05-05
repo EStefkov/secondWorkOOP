@@ -3,7 +3,7 @@
 
 CTree::CTree(void) {
 	height = 0.00;
-	type = "empty input";
+	type = "empty input ";
 }
 CTree::CTree(float height, string type) {
 	this->height = height;
@@ -11,11 +11,13 @@ CTree::CTree(float height, string type) {
 }
 void CTree::getData() {
 	CGarden::getData();
-	cout << "How high it is: "; cin >> height;
-	cout << "Select coniferous or deciduous: "; cin >> type;
+	cout << "\nHow high it is: "; cin >> height;
+	cout << "\nSelect coniferous or deciduous: "; cin >> type;
+	
 }
 void CTree::display() {
 	CGarden::display();
-	cout << "Height of the three is: " << height << "m.\n" <<
-		"You select" << type;
+	cout << "\nHeight of the three is: " << height << "m.\n" <<
+		"\nYou select " << type<<endl;
 }
+
